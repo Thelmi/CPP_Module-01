@@ -2,15 +2,19 @@
 
 void HumanB::attack()
 {
-	std::cout << name << " attacks with their " << weaponB.getType() << std::endl;
+	if (weaponB)
+		std::cout << name << " attacks with their " << weaponB->getType() << std::endl;
+	else
+		std::cout << name << " no Weapon loser" << std::endl;
 }
 
-HumanB::HumanB(std::string Name)
+HumanB::HumanB(std::string Name):name(Name),weaponB(NULL)
 {
-	name = Name;
+	// name = Name;
+	// weaponB = NULL;
 }
 
-void HumanB::setWeapon(Weapon WeaponB)
+void HumanB::setWeapon(Weapon &WeaponB) 
 {
-	weaponB = WeaponB;
+	weaponB = &WeaponB;
 }
