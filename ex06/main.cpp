@@ -1,11 +1,9 @@
 #include "Harl.hpp"
 
-int main()
+int main(int ac, char **av)
 {
+	if (ac != 2)
+		return 1;
 	Harl taha;
-	taha.complain("DEBUG");
-	// taha.complain("INFO");
-	// taha.complain("WARNING");
-	// taha.complain("ERROR");
-	// taha.complain("INVALID");
+	taha.complain(av[1]);
 }

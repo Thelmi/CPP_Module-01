@@ -10,8 +10,7 @@ void HumanB::attack()
 
 HumanB::HumanB(std::string Name):name(Name),weaponB(NULL)
 {
-	// name = Name;
-	// weaponB = NULL;
+
 }
 
 void HumanB::setWeapon(Weapon &WeaponB) 

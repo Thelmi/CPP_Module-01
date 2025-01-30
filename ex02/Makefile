@@ -4,17 +4,17 @@ SRC = main.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
-CC = c++
+CXX = c++
 
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CPPFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CXX) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 %.o:%.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CPPFLAGS) -c $< -o $@
 
 re: fclean all
 

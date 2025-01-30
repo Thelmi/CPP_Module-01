@@ -2,10 +2,10 @@
 
 int main()
 {
-	Zombie zombieone("x");
-	zombieone.announce();
-	
-	Zombie *zombieptr = zombieone.newZombie("hello");
-	zombieptr->announce();
-	delete (zombieptr);
+	Zombie zombieOne;
+	//zombieOne.announce();
+	zombieOne.randomChump("X");
+	Zombie *zombiePtr = zombieOne.newZombie("hello");
+	zombiePtr->announce();
+	delete (zombiePtr);
 }

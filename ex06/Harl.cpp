@@ -23,15 +23,17 @@ void Harl::error()
 void Harl::complain( std::string level )
 {
 	int level_index = -1;
-    void (Harl::*functions[])() = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
+	void (Harl::*functions[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
 
-    std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
+	std::string levels[] = { "DEBUG", "INFO", "WARNING", "ERROR" };
 
-	for (int i = 0; i < 4; i++) {
-        if (levels[i] == level) {
-             level_index = i;
-        }
-    }
+	for (int i = 0; i < 4; i++) 
+	{
+		if (levels[i] == level)
+		{
+				level_index = i;
+		}
+	}
 	switch (level_index)
 	{
 		case 0:
@@ -45,7 +47,7 @@ void Harl::complain( std::string level )
 			 // Fall through
 		case 3:
 			(this->*functions[3])();
-			// Fall through
+			break ;
 		default:
 			std::cout << "invalid input" << std::endl;
 			return ;

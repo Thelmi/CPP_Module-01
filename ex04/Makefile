@@ -1,6 +1,6 @@
-NAME = Fight
+NAME = stream
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp stream.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

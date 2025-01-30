@@ -7,5 +7,5 @@ void HumanA::attack()
 
 HumanA::HumanA(std::string Name, Weapon &WeaponA):name(Name),weaponA(WeaponA)
 {
-	// name = Name;
+	
 }
